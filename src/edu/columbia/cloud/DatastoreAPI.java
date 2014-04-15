@@ -23,7 +23,6 @@ public class DatastoreAPI {
 
 		Key k = datastore.put(employee);
 		
-		
 	}
 	
 	public static ArrayList<Coordinate> getLocationList(String word)	{
