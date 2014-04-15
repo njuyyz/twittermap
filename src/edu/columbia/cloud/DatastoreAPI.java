@@ -12,7 +12,7 @@ public class DatastoreAPI {
 
 	public static void addRecord(String word, double lat, double lon)	{
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		Entity employee = new Entity("Employee");
+		Entity employee = new Entity("Tweet");
 
 		employee.setProperty("word", word);
 		employee.setProperty("Latitude", lat);
@@ -22,6 +22,8 @@ public class DatastoreAPI {
 		employee.setProperty("tweetDate", tweetDate);
 
 		Key k = datastore.put(employee);
+		
+		
 	}
 	
 	public static ArrayList<Coordinate> getLocationList(String word)	{
